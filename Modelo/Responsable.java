@@ -12,10 +12,10 @@ public class Responsable {
         this.mascotas = new ArrayList<Mascota>();
     }
 
-    public String getInfo(){
-        String info="";
-        info+="Nombre:"+nombre+"\n";
-        info+="Contacto:"+contacto;
+    public String[] getInfo(){
+        String[] info=new String[2];
+        info[0]=nombre;
+        info[1]=contacto;
 
         return info;
     }
@@ -28,4 +28,9 @@ public class Responsable {
         mascotas.add(mascota);
     }
 
+    //Para poder mostrar el nombre en inputDialog
+    @Override
+    public String toString(){
+        return nombre;
+    }
 }

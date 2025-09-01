@@ -14,15 +14,18 @@ public class Consulta {
         this.mascota = mascota;
     }
 
-    public String getInfo(){
-        String info="";
-        info+="Fecha:"+fecha+"\n";
-        info+="Motivo:"+motivo+"\n";
-        info+="Tratamiento:"+tratamiento+"\n";
+    public String[] getInfo(){
+        String[] info=new String[3];
+        info[0]=fecha.toString();
+        info[1]=motivo;
+        info[2]=tratamiento;
 
         return info;
     }
 
+    public Date getFecha(){
+        return fecha;
+    }
     public Mascota getMascota(){
         return mascota;
     }
